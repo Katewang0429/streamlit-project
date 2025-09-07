@@ -1,9 +1,8 @@
-import os
 import requests
 import streamlit as st
 from streamlit_lottie import st_lottie
 from PIL import Image
-
+from pathlib import Path
 st.set_page_config(page_title = "NASTAR", page_icon=":tada:", layout="wide" )
 
 def load_lottieurl(url: str):
@@ -14,14 +13,9 @@ def load_lottieurl(url: str):
 
 # Load assets
 lottie_coding = "https://lottie.host/9a4b412d-9cf6-45ad-8812-7ea1fed64004/3KToPQDHXa.json"
-# Get the directory of the current script
-BASE_DIR = os.path.dirname(__file__)  
-
-# Build the path to the image
-image_path = os.path.join(BASE_DIR, "../images/rescuer_3.jpg")
 
 # Open the image
-image__rescue = Image.open("../images/rescuer_3.jpg")
+image__rescue = Image.open(Path(__file__).parent.parent / "images" / "rescuer_3.jpg")
 
 # Header Section
 with st.container():
@@ -57,6 +51,7 @@ with st.container():
 
 with right_column:
      st_lottie(lottie_coding, height=300, key= "coding" )
+
 
 
 
