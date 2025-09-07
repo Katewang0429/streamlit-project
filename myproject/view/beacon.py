@@ -1,10 +1,9 @@
 import streamlit as st
 from PIL import Image
+from pathlib import Path
 
 st.title("Bushland Beacon")
-
-image__bushland_Beacon = Image.open("images/rescuer_2.jpg")
-
+image__bushland_Beacon = Image.open(Path(__file__).parent.parent / "images" / "rescuer_2.jpg")
 
 # Image display
 with st.container():
@@ -20,3 +19,4 @@ with st.container():
         st.write("""Some description """)
         st.markdown("[Video Link]")
             
+
