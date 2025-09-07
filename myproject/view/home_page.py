@@ -3,7 +3,7 @@ import streamlit as st
 from streamlit_lottie import st_lottie
 from PIL import Image
 from pathlib import Path
-st.set_page_config(page_title = "NASTAR", page_icon=":tada:", layout="wide" )
+st.set_page_config(page_title = "NASTAR", layout="wide" )
 
 def load_lottieurl(url: str):
     r = requests.get(url)
@@ -51,6 +51,7 @@ with st.container():
 
 with right_column:
      st_lottie(lottie_coding, height=300, key= "coding" )
+
 
 
 
