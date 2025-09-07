@@ -3,7 +3,7 @@ import streamlit as st
 # page setup
 about_page = st.Page(
     page= "view/home_page.py",
-    title= "Home Page" ,
+    title= "Home Page",
     icon= ":material/account_circle:",
     default= True,
 )
@@ -17,7 +17,7 @@ project_1_page=st.Page(
 project_2_page= st.Page(
     page="view/beacon.py",
     title="Bushland Beacon",
-    icon= ":material/e911_emergency:",
+    icon= ":material/add_alert:",
 )
 
 
@@ -32,4 +32,5 @@ pg = st.navigation(
     }
 )
 pg.run()
+
 
