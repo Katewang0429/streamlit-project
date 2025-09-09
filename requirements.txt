@@ -1,4 +1,20 @@
-requests==2.32.3
-streamlit==1.36.0
-streamlit-lottie
-pillow
+# Core web app
+streamlit>=1.32.0
+
+# Object detection
+ultralytics>=8.2.0   # YOLOv8 framework
+torch>=2.1.0         # PyTorch backend (CPU ok, GPU if available)
+
+# Computer vision & data handling
+opencv-python-headless>=4.9.0.80   # OpenCV without GUI, works in Streamlit
+numpy>=1.24.0
+pandas>=2.0.0
+
+# Optional utilities
+matplotlib>=3.7.0      # for quick plots/visuals
+supervision>=0.17.0    # nice bounding box & overlay utilities
+ffmpeg-python>=0.2.0   # video encoding/decoding helpers
+Pillow>=10.0.0         # image processing (used by Streamlit)
+
+# (Optional) ONNX Runtime for faster CPU inference
+onnxruntime>=1.16.0

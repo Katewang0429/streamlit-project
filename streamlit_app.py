@@ -1,35 +1,34 @@
 import streamlit as st
 
-# page setup
-about_page = st.Page(
-    page= "view/home_page.py",
-    title= "Home Page" ,
-    icon= ":material/account_circle:",
-    default= True,
+# --- Global Config ---
+st.set_page_config(page_title="SAR Object Detection", layout="centered")
+# --- Landing Page Content ---
+st.title("🌐 Welcome to SAR Vision Tools")
+st.image(
+    "https://upload.wikimedia.org/wikipedia/commons/9/9e/SAR_drone.jpg",
+    caption="Aerial view used in SAR missions",
+    width='content'
 )
 
-project_1_page=st.Page(
-    page= "view/lost_at_sea.py",
-    title= "Lost at sea",
-    icon= ":material/person_search:",
-)
+st.markdown("""
+   
+This web application helps *search and rescue teams* and *researchers* detect critical objects from images captured via *drones, bodycams, or other camera systems*.
 
-project_2_page= st.Page(
-    page="view/beacon.py",
-    title="Bushland Beacon",
-    icon= ":material/e911_emergency:",
-)
+Using computer vision, the app can:
+- 🔍 Detect people, backpacks, vehicles, and equipment
+- 📸 Process uploaded images from field cameras
+- 📈 Display detection confidence for each object
+- 💾 Optionally save results for analysis
 
+---
 
-# Navigation setup
-# pg = st.navigation(pages=[about_page, project_1_page,  project_2_page])
+### 🚀 How to Get Started
 
-# Navigation setup with section
-pg = st.navigation(
-    {
-    "Info": [about_page],
-    "Demo":[ project_1_page,  project_2_page]
-    }
-)
-pg.run()
+1. Go to the *Detection* page (in the sidebar)
+2. Upload an image from your camera or device
+3. Click "Run Detection"
+4. View results with bounding boxes and confidence levels
+""")
 
+st.markdown("---")
+st.markdown("© 2025 SAR Vision Tools | ")
