@@ -1,20 +1,22 @@
-# Core web app
-streamlit>=1.32.0
+# Use PyTorch CPU wheels
+--extra-index-url https://download.pytorch.org/whl/cpu
 
-# Object detection
-ultralytics>=8.2.0   # YOLOv8 framework
-torch>=2.1.0         # PyTorch backend (CPU ok, GPU if available)
+# Core
+streamlit==1.35.0
+numpy>=1.26
+pandas>=2.2
+Pillow>=10.3
 
-# Computer vision & data handling
-opencv-python-headless>=4.9.0.80   # OpenCV without GUI, works in Streamlit
-numpy>=1.24.0
-pandas>=2.0.0
+# CV / plotting
+opencv-python-headless==4.9.0.80
+matplotlib>=3.8
 
-# Optional utilities
-matplotlib>=3.7.0      # for quick plots/visuals
-supervision>=0.17.0    # nice bounding box & overlay utilities
-ffmpeg-python>=0.2.0   # video encoding/decoding helpers
-Pillow>=10.0.0         # image processing (used by Streamlit)
+# YOLO
+ultralytics==8.2.0
+torch==2.2.2
+torchvision==0.17.2
 
-# (Optional) ONNX Runtime for faster CPU inference
+# Utilities (optional but common)
+supervision==0.17.0
+ffmpeg-python>=0.2.0
 onnxruntime>=1.16.0
