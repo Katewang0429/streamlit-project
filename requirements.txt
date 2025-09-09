@@ -1,4 +1,4 @@
-# Use PyTorch CPU wheels
+# Make sure PyTorch CPU wheels resolve cleanly
 --extra-index-url https://download.pytorch.org/whl/cpu
 
 # Core
@@ -7,16 +7,16 @@ numpy>=1.26
 pandas>=2.2
 Pillow>=10.3
 
-# CV / plotting
+# OpenCV (headless = no libGL needed)
 opencv-python-headless==4.9.0.80
-matplotlib>=3.8
 
-# YOLO
+# YOLO / Torch (CPU)
 ultralytics==8.2.0
 torch==2.2.2
 torchvision==0.17.2
 
-# Utilities (optional but common)
+# Utils (optional)
+matplotlib>=3.8
 supervision==0.17.0
 ffmpeg-python>=0.2.0
 onnxruntime>=1.16.0
